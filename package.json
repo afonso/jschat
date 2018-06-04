@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "Simple Chat with NodeJS",
   "main": "server.js",
+  "bin": {
+    "jschat-cli": "cli.js",
+    "jschat": "cli.js"
+  },
   "dependencies": {
     "socket.io": "^2.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-rem": "^4.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "extensions": ["md"]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && echo 'no tests!'",
+    "lint": "xo",
     "start": "node server.js"
   },
   "author": "Afonso",
