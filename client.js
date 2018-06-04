@@ -1,7 +1,7 @@
-var username;
-var socket;
-var connected = false;
-var lastGrey = false; //Used to alternate color of messages;
+let username;
+let socket;
+let connected = false;
+let lastGrey = false; //Used to alternate color of messages;
 
 function connect(text) {
   console.log(text);
@@ -20,7 +20,7 @@ function connect(text) {
 }
 
 function addMessage(username, message) {
-  var li = $("<li></li>",{
+  const li = $("<li></li>",{
     "class": "message",
     "style": "background-color:" + (lastGrey ? "white" : "#eee") + ";list-style-type:none;",
     "text": username + ": " + message}

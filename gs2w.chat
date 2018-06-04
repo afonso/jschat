@@ -5,6 +5,7 @@
     <link rel="stylesheet"
         href="/bootstrap.min.css">
     <script src="/socket.io/socket.io.js"></script>
+    <title>JS Chat</title>
   </head>
   <body>
     <div class="chat-box" id="chatBox">
@@ -13,7 +14,6 @@
           Welcome! To get started type "connect" followed by your username
         </li>
       </ul>
-    </div>
     </div>
     <div class="message-box">
       <form id="messageInput" onSubmit="return false;">
